@@ -1,0 +1,37 @@
+{
+    "name": "matlab-in-julia",
+    "displayName": "Embedded Matlab in Julia",
+    "description": "Syntax highlighting for matlab code embedded in Julia via MATLAB.jl",
+    "version": "0.0.1",
+    "publisher": "haberdashPI",
+    "engines": {
+        "vscode": "^1.30.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "keywords": [
+        "Julia", "MATLAB"
+    ],
+    "contributes": {
+        "grammars": [
+            {
+                "scopeName": "julia.matlab.codeblock",
+                "path": "./syntaxes/codeblock.json",
+                "injectTo": [
+                    "source.julia"
+                ],
+                "embeddedLanguages": {
+                    "meta.embedded.block.julia": "matlab"
+                }
+            }
+          ]
+    },
+    "extensionDependencies": [
+        "gimly81.matlab"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "TODO"
+    }
+}
