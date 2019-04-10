@@ -1,58 +1,50 @@
 {
-	"fileTypes": [],
+	"scopeName": "julia.matlab.codeblock",
 	"injectionSelector": "L:source.julia",
 	"patterns": [
-		{
-			"include": "#matlab_code_block"
-		},
-		{
-			"include": "#matlab_code_string"
-		}
+		{ "include": "#matlab_code_block" },
+		{ "include": "#matlab_code_string" }
 	],
 	"repository": {
-		"matlab_code_string": {
-			"begin": "(mat)(\")",
+        "matlab_code_string": {
+			"begin": "\\b(mat)(\")(?!\")",
 			"beginCaptures": {
 				"1": {
 					"name": "support.function.macro.julia"
 				},
 				"2": {
-					"name": "punctuation.defintion.string.begin.julia"
+					"name": "punctuation.definition.string.begin.julia"
 				}
 			},
-			"end": "(?<!\\)\"",
+			"end": "[^\\\\](\")",
 			"endCaptures": {
 				"1": {
 					"name": "punctuation.definition.string.end.julia"
 				}
 			},
-			"name": "meta.embedded.string.julia",
-			"patterns": [
-				{
-					"include": "source.julia#string_dollar_sign_interpolate"
-				},
-				{
-					"include": "source.matlab"
-				}
-			]
+            "name": "meta.quoted.matlab",
+            "patterns": [
+                { "include": "source.julia#string_dollar_sign_interpolate" },
+                { "include": "source.matlab" }
+            ]
 		},
 		"matlab_code_block": {
-			"begin": "^[ \\t]*(mat)(\"\"\")[ \\t]*$",
+			"begin": "\\b(mat)(\"\"\")",
 			"beginCaptures": {
 				"1": {
 					"name": "support.function.macro.julia"
 				},
 				"2": {
-					"name": "punctuation.defintion.string.begin.julia"
+					"name": "punctuation.definition.string.begin.julia"
 				}
 			},
-			"end": "^[  \\t]*(\"\"\")[ \\t]*$",
+			"end": "(\"\"\")",
 			"endCaptures": {
 				"1": {
 					"name": "punctuation.definition.string.end.julia"
 				}
 			},
-			"name": "meta.embedded.block.julia",
+			"name": "meta.embedded.block.matlab",
 			"patterns": [
 				{
 					"include": "source.julia#string_dollar_sign_interpolate"
@@ -62,7 +54,6 @@
 				}
 			]
 		}
-	},
-	"scopeName": "julia.matlab.codeblock"
+	}
 }
 

@@ -22,7 +22,7 @@
                     "source.julia"
                 ],
                 "embeddedLanguages": {
-                    "meta.embedded.block.julia": "matlab"
+                    "meta.embedded.block.matlab": "matlab"
                 }
             }
           ]
