@@ -23,6 +23,10 @@
                 ],
                 "embeddedLanguages": {
                     "meta.embedded.block.matlab": "matlab"
+                },
+                "tokenTypes": {
+                    "meta.embedded.block.matlab": "other",
+                    "meta.quoted.matlab": "other"
                 }
             }
           ]
