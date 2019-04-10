@@ -32,6 +32,6 @@
     ],
     "repository": {
         "type": "git",
-        "url": "TODO"
+        "url": "https://github.com/haberdashPI/vscode-matlab-in-julia"
     }
 }
