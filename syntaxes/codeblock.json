@@ -2,7 +2,6 @@
 	"scopeName": "julia.matlab.codeblock",
 	"injectionSelector": "L:string.quoted.other",
 	"patterns": [
-		{ "match": "TEST", "name": "keyword.test" },
 		{ "include": "#matlab_code_block" },
 		{ "include": "#matlab_code_string" }
 	],
