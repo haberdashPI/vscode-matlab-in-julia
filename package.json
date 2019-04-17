@@ -22,17 +22,18 @@
                     "source.julia"
                 ],
                 "embeddedLanguages": {
-                    "meta.embedded.block.matlab": "matlab"
+                    "variable.matlab.block.string": "matlab"
                 },
                 "tokenTypes": {
-                    "meta.embedded.block.matlab": "other",
-                    "meta.quoted.matlab": "other"
+                    "variable.matlab.block.string": "other",
+                    "variable.matlab.string": "other"
                 }
             }
           ]
     },
     "extensionDependencies": [
-        "gimly81.matlab"
+        "gimly81.matlab",
+        "julialang.language-julia"
     ],
     "repository": {
         "type": "git",

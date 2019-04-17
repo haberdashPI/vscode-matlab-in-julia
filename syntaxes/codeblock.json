@@ -1,6 +1,6 @@
 {
 	"scopeName": "julia.matlab.codeblock",
-	"injectionSelector": "L:string.quoted",
+	"injectionSelector": "L:string.quoted.other",
 	"patterns": [
 		{ "match": "TEST", "name": "keyword.test" },
 		{ "include": "#matlab_code_block" },
@@ -8,20 +8,20 @@
 	],
 	"repository": {
         "matlab_code_string": {
-			"begin": "(?<=mat\")[^\"]",
-			"end": "[^\\\\](?=\")",
-            "name": "meta.quoted.matlab",
+			"begin": "(?<=mat\")([^\"]|$)",
+			"end": "(.|^)(?=\")",
+            "name": "variable.matlab.string",
             "patterns": [
                 { "include": "source.julia#string_dollar_sign_interpolate" },
                 { "include": "source.matlab" }
             ]
 		},
 		"matlab_code_block": {
-			"begin": "(?<=mat\"\"\").",
-			"end": ".(?=\"\"\")",
-			"name": "meta.embedded.block.matlab",
+			"begin": "(?<=mat\"\"\")(.|$)",
+			"end": "(.|^)(?=\"\"\")",
+			"name": "variable.matlab.block.string",
 			"patterns": [
-				{ "include": "source.julia#string_dollar_sign_interpolate" },
+                { "include": "source.julia#string_dollar_sign_interpolate" },
 				{ "include": "source.matlab" }
 			]
 		}
