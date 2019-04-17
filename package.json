@@ -2,7 +2,7 @@
     "name": "matlab-in-julia",
     "displayName": "Embedded Matlab in Julia",
     "description": "Syntax highlighting for matlab code embedded in Julia via MATLAB.jl",
-    "version": "0.0.3",
+    "version": "0.1.0",
     "publisher": "haberdashPI",
     "engines": {
         "vscode": "^1.30.0"
