@@ -1,4 +1,4 @@
-# Markdown Julia for VS Code
+# Matlab in Julia
 
 [MATLAB](https://www.mathworks.com/products/matlab.html) syntax highlighting
 inside [Julia](http://julialang.org) within
